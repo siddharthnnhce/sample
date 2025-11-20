@@ -1,0 +1,120 @@
+/* src/components/Navigation.css */
+.navbar {
+  background: rgba(255, 253, 250, 0.95);
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid #8B4513;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo a {
+  color: #8B4513;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: 'Georgia', serif;
+  transition: color 0.3s ease;
+}
+
+.nav-logo a:hover {
+  color: #654321;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #5D4037; /* DARK BROWN - This makes links visible by default */
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 600; /* Made it bolder */
+  font-family: 'Georgia', serif;
+}
+
+.nav-link:hover {
+  color: #FFFFFF; /* White text on hover */
+  background: #8B4513; /* Brown background on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(139, 69, 19, 0.3);
+}
+
+/* Active link style - for current page */
+.nav-link.active {
+  color: #FFFFFF;
+  background: #8B4513;
+}
+
+/* Make the links even more visible - you can try this if still not clear */
+.nav-item {
+  position: relative;
+}
+
+/* Alternative: Add underline to make it more clear */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #8B4513;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 80%;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    gap: 1rem;
+  }
+  
+  .nav-link {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .nav-logo a {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav-menu {
+    gap: 0.5rem;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .nav-link::after {
+    display: none; /* Hide underline on mobile */
+  }
+}
