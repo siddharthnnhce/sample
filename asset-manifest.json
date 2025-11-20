@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/flooring-3/static/css/main.d42b67c7.css",
+    "main.js": "/flooring-3/static/js/main.c31acba8.js",
+    "index.html": "/flooring-3/index.html",
+    "main.d42b67c7.css.map": "/flooring-3/static/css/main.d42b67c7.css.map",
+    "main.c31acba8.js.map": "/flooring-3/static/js/main.c31acba8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d42b67c7.css",
+    "static/js/main.c31acba8.js"
+  ]
+}
